@@ -1,0 +1,26 @@
+Ctrl+B                      Cerrar menú lateral 
+Alt + Down                  Mueve línea
+Shift + Alt + F             Identa el código
+Shift + ->                  Selección de líneas
+Ctrl + }                    Comentado rápido de selección
+Shift + Alt + A             Comenta sobre lo seleccionado en texto medio 
+Ctrl + Click Derecho        Crear archivo señalado
+Ctrl + Click Derecho        Ir a definición de la función
+Ctrl + Shift + K            Borrar línea
+Ctrl + Shift + L            Multicoursor en interaciones
+Ctrl + K Z                  Zen Mode 
+Ctrl + P                    Entrada a la busqueda de Visual Code
+Ctrl + Tab                  Cambio de ventana
+Shift + Alt + Down          Copiar linea abajo
+Ctrl + Shift + ->           Selecciona toda la palabra en modo multicursor
+Shift + ->                  Avanza una posición en multicursor
+Ctrl + Shift + U            Capitaliza siguiente letra 
+Ctrl + Shift + L            Minuscula siguiente letra 
+Alt + Click                 Cursor en esa posición
+Ctrl + Shift + O + :        Cambiar entre diferentes funciones
+Ctrl + G                    Ir a la línea
+Alt + ->                    Siguiente ventana
+
+Extensiones
+
+Ctrl + Alt + K              Bookmark

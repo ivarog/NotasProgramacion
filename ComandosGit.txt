@@ -1,0 +1,79 @@
+CREDENCIALES
+git config --global user.name "#####"
+git config --global user.email "#####"
+git config -l
+
+ACTIVAR GIT 
+git init
+
+AGREGAR ARCHIVOS
+git add .
+
+CONOCER STATUS
+git status
+
+REALIZAR COMMIT
+git commit -m "Commit Inicial"
+
+MOSTRAR DIFERENCIAS
+git diff
+
+VOLVER A ÚLTIMO COMMIT
+git checkout .
+
+VER CAMBIOS EN EL REPOSITORIO
+git log
+
+QUITAR ELEMENTO DE STAGE
+git reset nombredelarchivo || git reset nombredellacarpeta/*.extension
+
+AYUDA
+git help nombrecomando || git help
+
+ALIAS
+git config --global alias.l "log"
+
+MODIFICACIÓN MENSAJE
+git commit --amend -m "Nueva modificación"
+
+REGRESAR CAMBIOS
+git reset --mixed||--soft||--hard idcambio
+git reflog
+
+IGNORAR ARCHIVO
+Colocar el nombre en .gitignore
+https://github.com/github/gitignore
+
+CREAR RAMA
+git branch nombrerama
+
+VER RAMAS
+git log --oneline --decorate --all --graph
+
+CAMBIAR RAMA 
+git checkout nombrerama
+
+INTEGRAR RAMA A MASTER
+git merge nombreramaaunir
+
+ELIMINAR RAMA
+git branch -d nombrerama
+
+CREAR Y CAMBIAR RAMA
+git checkout -b nombrerama
+
+PARA GITHUB
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ivarog/BienesRaices.git
+git push -u origin master
+
+SUBIR A GITHUB
+git push -u origin master
+
+TRAER DE GITHUB
+git pull
+
+CLONAR DE HITHUB
+git clone git://github.com/schacon/grit.git
