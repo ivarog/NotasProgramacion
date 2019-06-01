@@ -21,11 +21,32 @@ git diff
 VOLVER A ÚLTIMO COMMIT
 git checkout .
 
+VOLVER A OTRO COMMIT (TEMPORAL)
+git checkout ID_COMMIT
+
+REGRESAR AL TOPE DE LA PILA
+git checkout master
+
 VER CAMBIOS EN EL REPOSITORIO
 git log
 
+CAMBIOS REDUCIDOS
+git log --oneline 
+
+REVERIR LOS CAMBIOS SIN BORRAR LOS MISMOS, CREA OTRO COMMIT (PERMANENTE)
+git revert ID_COMMIT
+
+RESET TRES MODOS
+Soft: Básicamente como un checkout
+Mixed: Cambia el header pero los cambios se mantienen en el archivo
+Hard: Mueve el header y borra los demás commits
+
+REVERTIR LOS CAMBIO BORRANDO LOS POSTERIORES AL MISMO (PERMANENTE)
+git reset --hard ID_COMMIT
+
 QUITAR ELEMENTO DE STAGE
-git reset nombredelarchivo || git reset nombredellacarpeta/*.extension
+git reset nombredelarchivo 
+git reset nombredellacarpeta/*.extension
 
 AYUDA
 git help nombrecomando || git help
@@ -33,8 +54,20 @@ git help nombrecomando || git help
 ALIAS
 git config --global alias.l "log"
 
+ETIQUETA A COMMIT
+git tag NOMBRE_ETIQUETA
+
 MODIFICACIÓN MENSAJE
 git commit --amend -m "Nueva modificación"
+
+CAMBIAR NOMBRE DE ARCHIVO CON GIT
+git mv NOMBRE_VIEJO NOMBRE_NUEVO
+
+ELIMINAR ARCHIVO CON GIT
+git rm NOMBRE_ARCHIVO
+
+MOSTRAR CAMBIOS INCLUSO DESPUES HARD
+git reflog
 
 REGRESAR CAMBIOS
 git reset --mixed||--soft||--hard idcambio
@@ -42,25 +75,35 @@ git reflog
 
 IGNORAR ARCHIVO
 Colocar el nombre en .gitignore
+#Archivos
+archivo.txt
+#Directorios
+Directorio/*
 https://github.com/github/gitignore
 
 CREAR RAMA
 git branch nombrerama
 
+CREAR Y CAMBIAR RAMA
+git checkout -b nombrerama
+
+CAMBIAR RAMA 
+git checkout nombrerama 
+
+LISTAR RAMAS
+git branch -a
+
 VER RAMAS
 git log --oneline --decorate --all --graph
 
-CAMBIAR RAMA 
-git checkout nombrerama
+VER GRAFO (BETO)
+git log --graph
 
 INTEGRAR RAMA A MASTER
 git merge nombreramaaunir
 
 ELIMINAR RAMA
 git branch -d nombrerama
-
-CREAR Y CAMBIAR RAMA
-git checkout -b nombrerama
 
 PARA GITHUB
 git init
@@ -69,11 +112,20 @@ git commit -m "first commit"
 git remote add origin https://github.com/ivarog/BienesRaices.git
 git push -u origin master
 
+VER DATOS DE REPOSITORIO
+git remote -v
+
 SUBIR A GITHUB
 git push -u origin master
 
-TRAER DE GITHUB
+TRAER DE GITHUB TODAS LAS RAMAS
 git pull
+
+TRAER DE GITHUB UNA RAMA
+git pull origin NOMBRE_RAMA
 
 CLONAR DE HITHUB
 git clone git://github.com/schacon/grit.git
+
+BORRAR RAMA REMOTAMENTE
+git push origin --delete NOMBRE_RAMA
